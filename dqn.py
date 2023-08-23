@@ -1,5 +1,5 @@
 import gym
-from gym.wrappers import Monitor
+from gym.wrappers import RecordVideo as Monitor
 import itertools
 import numpy as np
 import os
@@ -294,6 +294,7 @@ def deep_q_learning(sess,
 
     # Record videos
     # Use the gym env Monitor wrapper
+
     env = Monitor(env,
                   directory=monitor_path,
                   resume=True,
